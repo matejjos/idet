@@ -1,0 +1,58 @@
+<html> 
+<head> 
+<title>igauss.m</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-9"> 
+<link rel="stylesheet" type="text/css" href="style.css"> 
+</head> 
+<div id="obsah"> 
+<div id="text"> 
+<br> &nbsp; <a href="index.html">&lt;&lt; back to list of functions </a> 
+<br> 
+&nbsp; <h1 class="section"> &nbsp; function <code> igauss.m </code> </h1> <h2 class="subsection"> &nbsp; Author </h2> 
+<br> 
+Josef Matejka <br> 
+<br> 
+<h2 class="subsection"> &nbsp; Description </h2> 
+<br> 
+Gaussian elimination <br> 
+Function provides Gaussian elimination on an interval matrix [A|B], <br> 
+that represents system AX = B. <br> 
+<br> 
+<h2 class="subsection"> &nbsp; Input parameters </h2> 
+<br> 
+<b> iA  </b> ...  m x n matrix <br> 
+<b> iB  </b> ...  n x k matrix - optional <br> 
+<br> 
+<h2 class="subsection"> &nbsp; Output parameters </h2> 
+<br> 
+<b> iA   </b> ...  m x n upper diagonal matrix, eliminated A matrix. <br> 
+on diagonal <br> 
+<b> iB   </b> ...  n x k matrix, if we suppose PA = C, then PB = D, where P is <br> 
+a matrix of elimination steps. <br> 
+<b> d    </b> ...  the sign of a determinant of given matrix <br> 
+<b> state  </b> ...  'ok' means no error occured, 'sin' means that A is either <br> 
+singular, or it seems singular due to wideing of interval <br> 
+arithmetic. <br> 
+<br> 
+<h2 class="subsection"> &nbsp; Implementation details </h2> 
+<br> 
+We choose pivot for every column as the biggest absolute value of <br> 
+mid of an interval <br> 
+<br> 
+<br> 
+<h2 class="subsection"> &nbsp; History </h2> 
+<br> 
+2016-10-22    first version <br> 
+2017-03-23    changed we things, code should be more readable <br> 
+2017-04-07    added state <br> 
+<br> 
+<h2 class="subsection"> &nbsp; Todo </h2> 
+<br> 
+<br><br><br><br> 
+<hr> 
+<code> Generated automatically by OcDoc Thu Aug 31 19:50:01 2017
+ </code> 
+</div> 
+</div> 
+</body> 
+</html> 

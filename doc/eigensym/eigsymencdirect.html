@@ -1,0 +1,67 @@
+<html> 
+<head> 
+<title>eigsymencdirect.m</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-9"> 
+<link rel="stylesheet" type="text/css" href="style.css"> 
+</head> 
+<div id="obsah"> 
+<div id="text"> 
+<br> &nbsp; <a href="index.html">&lt;&lt; back to list of functions </a> 
+<br> 
+&nbsp; <h1 class="section"> &nbsp; function <code> eigsymencdirect.m </code> </h1> <h2 class="subsection"> &nbsp; Author </h2> 
+<br> 
+Nikolay Stoyanov Kaleyski <br> 
+<br> 
+<h2 class="subsection"> &nbsp; Description </h2> 
+<br> 
+Computation of an outer approximation of the bounds of the eigenvalue <br> 
+intervals of the real symmetric matrix iA using the direct interlacing <br> 
+algorithm. <br> 
+<br> 
+<h2 class="subsection"> &nbsp; Input parameters </h2> 
+<br> 
+<b> iA  </b> ... a real symmetric interval matrix <br> 
+<b> mode  </b> ... one of 'FORWARD', 'REVERSE' or 'BOTH', specifying which <br> 
+variant of the algorithm to run; default is 'FORWARD' <br> 
+<b> upperboundmethod  </b> ... a function receiving a symmetric interval matrix <br> 
+and returning an upper outer bound for its largest eigenvalue interval; <br> 
+default is a quick estimate using Rohn's theorem and the eigenvalues of <br> 
+mag(iA) <br> 
+<b> indexselectionmethod  </b> ... a method for selecting indices to add or <br> 
+remove in accordance with the implementation of the direct interlacing <br> 
+method; see the description of eigsymencouterdirectsingleupper.m <br> 
+for more details; default is the first such method described in the <br> 
+bachelor thesis (p. 19) <br> 
+<br> 
+<h2 class="subsection"> &nbsp; Output parameters </h2> 
+<br> 
+<b> ib  </b> ... the computed outer approximation of the eigenvalue interval <br> 
+bounds <br> 
+<br> 
+<h2 class="subsection"> &nbsp; Implementation details </h2> 
+<br> 
+This is essentially a wrapper method which calls the function <br> 
+eigsymencouterdirectsingleupper.m for the individual eigenvalues of iA <br> 
+and -iA (for upper and lower bounds). A vector is used for keeping track <br> 
+of the indices which have been added to/removed from the matrix so as <br> 
+not to have eigsymencouterdirectsingleupper.m account for more than one <br> 
+index at once. <br> 
+More details in Bounds on Real Eigenvalues and Singular Values of <br> 
+Interval Matrices, Milan Hladík, David Daney, Elis Tsigaridas, 2010s <br> 
+<br> 
+<br> 
+<h2 class="subsection"> &nbsp; History </h2> 
+<br> 
+2014-07-07   first version <br> 
+2017-03-30   renamed to eigsymencdirect <br> 
+<br> 
+<h2 class="subsection"> &nbsp; Todo </h2> 
+<br> 
+<br><br><br><br> 
+<hr> 
+<code> Generated automatically by OcDoc Thu Aug 31 19:50:28 2017
+ </code> 
+</div> 
+</div> 
+</body> 
+</html> 

@@ -1,0 +1,57 @@
+<html> 
+<head> 
+<title>eigsymencindirect.m</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-9"> 
+<link rel="stylesheet" type="text/css" href="style.css"> 
+</head> 
+<div id="obsah"> 
+<div id="text"> 
+<br> &nbsp; <a href="index.html">&lt;&lt; back to list of functions </a> 
+<br> 
+&nbsp; <h1 class="section"> &nbsp; function <code> eigsymencindirect.m </code> </h1> <h2 class="subsection"> &nbsp; Author </h2> 
+<br> 
+Nikolay Stoyanov Kaleyski <br> 
+<br> 
+<h2 class="subsection"> &nbsp; Description </h2> 
+<br> 
+Indirect interlacing method for computing an outer approximation for the <br> 
+bounds of the eigenvalue intervals of a real symmetric interval matrix. <br> 
+<br> 
+<h2 class="subsection"> &nbsp; Input parameters </h2> 
+<br> 
+<b> iA  </b> ... a real symmetric interval matrix <br> 
+<b> midEigs  </b> ... precomputd verified eigenvalue intervals for the central <br> 
+matrix of iA; will be computed with vereig if not supplied <br> 
+<b> upperboundmethod  </b> ... optionally, a method for computing an outer bound <br> 
+for all eigenvalues of iA; a version of the direct interlacing algorithm <br> 
+is used by default <br> 
+<br> 
+<h2 class="subsection"> &nbsp; Output parameters </h2> 
+<br> 
+<b> ib  </b> ... an interval vector with the computed approximation <br> 
+<br> 
+<h2 class="subsection"> &nbsp; Implementation details </h2> 
+<br> 
+This is a wrapper function which utilizes the implementing function <br> 
+eigsymencouterindirectsingleupper.m for computing bounds for individual <br> 
+eigenvalues and then combining them into a complete approximation. <br> 
+More details in Bounds on Real Eigenvalues and Singular Values of <br> 
+Interval Matrices, Milan Hladík, David Daney, Elis Tsigaridas, 2010s <br> 
+<br> 
+<br> 
+<h2 class="subsection"> &nbsp; History </h2> 
+<br> 
+2014-07-08   first version <br> 
+2017-03-30   renamed eigsymencindirect <br> 
+2017-03-30   linked with our own vereigsym <br> 
+<br> 
+<h2 class="subsection"> &nbsp; Todo </h2> 
+<br> 
+<br><br><br><br> 
+<hr> 
+<code> Generated automatically by OcDoc Thu Aug 31 19:50:28 2017
+ </code> 
+</div> 
+</div> 
+</body> 
+</html> 

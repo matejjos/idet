@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Documentation by OcDoc</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-9">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<div id="obsah">
+    <div id="text">
+        &nbsp; <h1 class="section"> &nbsp; Documentation for Lime </h1> <ul></ul><hr>
+        <h2 class="subsection"> &nbsp; About </h2>
+        <br />
+        LIME - (Library of Interval Methods) is toolbox for Matlab containing interval linear algebra methods. It was originally developed mostly for computing enclosure of square and overdetermined interval linear systems. This page is documentation of most important methods from this library. For more detailed description or for description of smaller helping methods one can take a look into the source m-files. Each m-file includes detailed description of methods implementation. <br />
+        <br />
+        <h2 class="subsection"> &nbsp; Prerequisites </h2>
+        <br />
+        For running this package two things are needed, <a href="https://www.gnu.org/software/octave/download.html">OCTAVE</a>  version 4.2.1 and package <a href="https://octave.sourceforge.io/interval/">interval</a>. <br />
+        <br />
+        <h2 class="subsection"> &nbsp; Running LIME </h2>
+        <br />
+        Simply put LIME package into your path, this can be done throught command <br /> '<b>addpath(genpath("address/to/LIME/folder"))</b>'. <br />
+        <br /> If interval package isn't loaded, it must be loaded by <br /> '<b>pkg load interval</b>'<br />
+        <br />
+        <h2 class="subsection"> &nbsp; Simple example </h2>
+        <br />
+        Generate random interval matrix of size 5 x 5, interval width less or equal to 10^(-5) and count its determinant:
+        '<b>idet(imatrand(5,5,-5,1))</b>' <br />
+        <br />
+        <h2 class="subsection"> &nbsp; List of functions </h2>
+        <br />
+        <a href="eigensym/index.html"> Eigenvalues of interval symmetric matrices </a> <br />
+        <a href="idet/index.html"> Determinant of interval matrices </a> <br />
+        <a href="imat/index.html"> Functions for working with interval matrices </a> <br />
+        <br />
+        <code>
+            Generated automatically by OcDoc Thu Aug 31 19:47:28 2017
+        </code>
+    </div>
+</div>
+</body>
+</html>
+

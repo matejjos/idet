@@ -1,0 +1,62 @@
+<html> 
+<head> 
+<title>eigsymencrohn.m</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-9"> 
+<link rel="stylesheet" type="text/css" href="style.css"> 
+</head> 
+<div id="obsah"> 
+<div id="text"> 
+<br> &nbsp; <a href="index.html">&lt;&lt; back to list of functions </a> 
+<br> 
+&nbsp; <h1 class="section"> &nbsp; function <code> eigsymencrohn.m </code> </h1> <h2 class="subsection"> &nbsp; Author </h2> 
+<br> 
+Nikolay Stoyanov Kaleyski, Jaroslav Horacek <br> 
+<br> 
+<h2 class="subsection"> &nbsp; Description </h2> 
+<br> 
+Very fast outer approximation of the eigenvalue interval bounds for a <br> 
+real symmetric interval matrix <br> 
+<br> 
+<h2 class="subsection"> &nbsp; Input parameters </h2> 
+<br> 
+<b> iA  </b> ........ a real symmetric interval matrix <br> 
+<b> iEigsAc  </b> ... optionally, a precomputed vector of eigenvalue bounds of the <br> 
+central matrix of iA (must be verified) <br> 
+<b> iEigsAd  </b> ... similarly, a precomputed vector for the radial matrix of iA; <br> 
+needs to be verified <br> 
+spectral .. similarly, a precomputed spectral radius of the radial <br> 
+matrix of iA; needs to be verified <br> 
+<br> 
+<h2 class="subsection"> &nbsp; Output parameters </h2> 
+<br> 
+<b> ienc  </b> ... an interval vector containing an outer approximation of the <br> 
+eigenvalues of iA <br> 
+<b> largest  </b> ... the upper bound for the largest eigenvalue of iA <br> 
+<br> 
+<h2 class="subsection"> &nbsp; Implementation details </h2> 
+<br> 
+The function computes its results by trivially following the statement <br> 
+of the theorem. Both sets of eigenvalues, 'eigsAc' and 'eigsAd' must al- <br> 
+ways be computed, even if we're looking only for the largest eigen- <br> 
+value's upper bound, and the computation of the upper and lower bounds <br> 
+takes very little time (it only involves adding and substracting a given <br> 
+vector from another), so it is always performed. <br> 
+If the function is called repeatedly from a more complex algorithm, <br> 
+chances are that the verified eigenvalues of mid(iA) and rad(iA) will <br> 
+need to be computed for several different functions; therefore, we <br> 
+allow the caller to provid pre-computed results so that we avoid <br> 
+redunadant computations. <br> 
+<b> method vereigsym returns eigenvalues sorted l1 <= l2 <=  </b> ... <br> 
+<br> 
+<br> 
+<br> 
+<h2 class="subsection"> &nbsp; Todo </h2> 
+<br> 
+<br><br><br><br> 
+<hr> 
+<code> Generated automatically by OcDoc Thu Aug 31 19:50:28 2017
+ </code> 
+</div> 
+</div> 
+</body> 
+</html> 
